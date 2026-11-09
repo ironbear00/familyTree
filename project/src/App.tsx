@@ -102,6 +102,12 @@ export default function App() {
           selectedId={selectedMember?.id}
           searchQuery={searchQuery}
         />
+
+        {/* Credits */}
+        <footer className="absolute bottom-3 right-4 z-20 text-right text-[11px] leading-relaxed text-slate-400 pointer-events-none select-none">
+          <div>정보 수정 문의: 최소정</div>
+          <div>© {new Date().getFullYear()} ironbear. All rights reserved.</div>
+        </footer>
       </main>
 
       {/* Mobile hint */}

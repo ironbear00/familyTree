@@ -100,8 +100,7 @@ export const familyData: FamilyData = {
 
     // ===== 4세대 =====
     // (남종모 자녀)
-    { id: "2-1-1-1", name: "남현준", gender: "male", generation: 4, parentId: "2-1-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
-    { id: "2-1-1-2", name: "로건", gender: "male", generation: 4, parentId: "2-1-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "2-1-1-1", name: "남현준로건", gender: "male", generation: 4, parentId: "2-1-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
 
     // (남효진 자녀)
     { id: "2-1-2-1", name: "김지아", gender: "female", generation: 4, parentId: "2-1-2", occupation: "미상", bio: "", avatarColor: "#b5476b" },

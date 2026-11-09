@@ -13,7 +13,8 @@ export const familyData: FamilyData = {
     { id: "3-S", name: "박영자", gender: "female", generation: 1, spouseId: "3", occupation: "", bio: "구지 할머니", avatarColor: "#b5476b" },
 
     // ===== 2세대 (최천조 자녀) =====
-    { id: "1-1", name: "최경자", gender: "female", generation: 2, parentId: "1", occupation: "", bio: "", avatarColor: "#b5476b" },
+    { id: "1-1", name: "최경자", gender: "female", generation: 2, parentId: "1", spouseId: "1-1-S", occupation: "", bio: "", avatarColor: "#b5476b" },
+    { id: "1-1-S", name: "이인수", gender: "male", generation: 2, spouseId: "1-1", occupation: "", bio: "", avatarColor: "#b5476b" },
     { id: "1-2", name: "최명숙", gender: "female", generation: 2, parentId: "1", spouseId: "1-2-S", occupation: "", bio: "", avatarColor: "#b5476b" },
     { id: "1-2-S", name: "김호웅", gender: "male", generation: 2, spouseId: "1-2", occupation: "", bio: "", avatarColor: "#1e6091" },
     { id: "1-3", name: "최명남", gender: "female", generation: 2, parentId: "1", spouseId: "1-3-S", occupation: "", bio: "", avatarColor: "#b5476b" },

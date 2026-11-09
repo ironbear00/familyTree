@@ -43,7 +43,7 @@ export const familyData: FamilyData = {
     { id: "3-1-S", name: "이유락", gender: "male", generation: 2, parentId: null, occupation: null, bio: "경주", spouseId: "3-1", avatarColor: AvatarColor.Male },
 
     { id: "3-2", name: "최정호", gender: "male", generation: 2, parentId: "3", occupation: null, bio: "구룡포", spouseId: "3-2-S", avatarColor: AvatarColor.Male },
-    { id: "3-2-S", name: "이정애", gender: "female", generation: 2, parentId: null, occupation: null, bio: "구룡포", spouseId: "3-2", avatarColor: AvatarColor.Female },
+    { id: "3-2-S", name: "김정애", gender: "female", generation: 2, parentId: null, occupation: null, bio: "구룡포", spouseId: "3-2", avatarColor: AvatarColor.Female },
 
     { id: "3-3", name: "최철호", gender: "male", generation: 2, parentId: "3", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
 
@@ -61,7 +61,7 @@ export const familyData: FamilyData = {
     // ===== 3세대 (최명남 자녀) =====
     { id: "1-3-1", name: "김지은", gender: "female", generation: 3, parentId: "1-3", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Female },
     { id: "1-3-2", name: "김세용", gender: "male", generation: 3, parentId: "1-3", occupation: null, bio: null, spouseId: "1-3-2-S", avatarColor: AvatarColor.Male },
-    { id: "1-3-2-S", name: "???", gender: "female", generation: 3, parentId: null, occupation: null, bio: null, spouseId: "1-3-2", avatarColor: AvatarColor.Female },
+    { id: "1-3-2-S", name: "홍희정", gender: "female", generation: 3, parentId: null, occupation: null, bio: null, spouseId: "1-3-2", avatarColor: AvatarColor.Female },
 
     // ===== 3세대 (최시훈 자녀) =====
     { id: "1-4-1", name: "최수빈", gender: "female", generation: 3, parentId: "1-4", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Female },
@@ -109,7 +109,7 @@ export const familyData: FamilyData = {
     // ===== 3세대 (최성호 자녀) =====
     { id: "3-4-1", name: "최정윤", gender: "female", generation: 3, parentId: "3-4", occupation: null, bio: null, spouseId: "3-4-1-S", avatarColor: AvatarColor.Female },
     { id: "3-4-1-S", name: "연승주", gender: "male", generation: 3, parentId: null, occupation: null, bio: null, spouseId: "3-4-1", avatarColor: AvatarColor.Male },
-    { id: "3-4-2", name: "최영규", gender: "male", generation: 3, parentId: "3-4", occupation: null, bio: null, spouseId: "3-4-2-S", avatarColor: AvatarColor.Male },
+    { id: "3-4-2", name: "최연규", gender: "male", generation: 3, parentId: "3-4", occupation: null, bio: null, spouseId: "3-4-2-S", avatarColor: AvatarColor.Male },
     { id: "3-4-2-S", name: "양은하", gender: "female", generation: 3, parentId: null, occupation: null, bio: null, spouseId: "3-4-2", avatarColor: AvatarColor.Female },
 
     // ===== 4세대 =====
@@ -120,15 +120,15 @@ export const familyData: FamilyData = {
     // (김혜련 자녀)
     { id: "1-2-1-1", name: "김태영", gender: "male", generation: 4, parentId: "1-2-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
     { id: "1-2-1-2", name: "김태성", gender: "male", generation: 4, parentId: "1-2-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
-    { id: "1-2-1-3", name: "김??", gender: "male", generation: 4, parentId: "1-2-1", occupation: null, bio: "미국 거주", spouseId: null, avatarColor: AvatarColor.Male },
-    { id: "1-2-1-4", name: "김??", gender: "male", generation: 4, parentId: "1-2-1", occupation: null, bio: "미국 거주", spouseId: null, avatarColor: AvatarColor.Male },
+    { id: "1-2-1-3", name: "김하영", gender: "female", generation: 4, parentId: "1-2-1", occupation: null, bio: "미국 거주", spouseId: null, avatarColor: AvatarColor.Male },
+    { id: "1-2-1-4", name: "김하은", gender: "female", generation: 4, parentId: "1-2-1", occupation: null, bio: "미국 거주", spouseId: null, avatarColor: AvatarColor.Male },
 
     // (김지은 자녀)
-    { id: "1-3-1-1", name: "김채은", gender: "female", generation: 4, parentId: "1-3-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Female },
+    { id: "1-3-1-1", name: "박채은", gender: "female", generation: 4, parentId: "1-3-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Female },
 
     // (김세용 자녀)
-    { id: "1-3-2-1", name: "???", gender: "male", generation: 4, parentId: "1-3-2", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
-    { id: "1-3-2-2", name: "???", gender: "male", generation: 4, parentId: "1-3-2", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
+    { id: "1-3-2-1", name: "김윤우", gender: "male", generation: 4, parentId: "1-3-2", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
+    { id: "1-3-2-2", name: "김도우", gender: "male", generation: 4, parentId: "1-3-2", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
 
     // (남종모 자녀)
     { id: "2-1-1-1", name: "남현준로건", gender: "male", generation: 4, parentId: "2-1-1", occupation: "응애", bio: "미국", spouseId: null, avatarColor: AvatarColor.Male },

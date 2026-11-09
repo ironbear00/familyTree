@@ -24,8 +24,8 @@ export default function App() {
             <GitBranch size={22} />
           </div>
           <div className="hidden sm:block">
-            <h1 className="text-lg font-bold text-slate-800 leading-tight">김영수 가족 가계도</h1>
-            <p className="text-xs text-slate-400">5세대 대가족 족보</p>
+            <h1 className="text-lg font-bold text-slate-800 leading-tight">최가네 가족 가계도</h1>
+            <p className="text-xs text-slate-400">족보</p>
           </div>
           <h1 className="sm:hidden text-base font-bold text-slate-800 leading-tight">가계도</h1>
         </div>

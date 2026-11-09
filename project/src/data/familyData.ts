@@ -125,4 +125,4 @@ export const familyData: FamilyData = {
     { id: "3-4-2-1", name: "최예린", gender: "female", generation: 4, parentId: "3-4-2", occupation: "미상", bio: "", avatarColor: "#b5476b" },
     { id: "3-4-2-2", name: "자녀", gender: "male", generation: 4, parentId: "3-4-2", occupation: "미상", bio: "", avatarColor: "#1e6091" },
   ],
-};
+};수

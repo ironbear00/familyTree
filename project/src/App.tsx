@@ -4,16 +4,31 @@ import FamilyTree from "@/components/FamilyTree";
 import MemberDetail from "@/components/MemberDetail";
 import { familyData } from "@/data/familyData";
 import type { FamilyMember } from "@/types/family";
+import { getRootMembers, getLineage } from "@/data/lineage";
+
+const ALL = "all";
 
 export default function App() {
   const [selectedMember, setSelectedMember] = useState<FamilyMember | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeRoot, setActiveRoot] = useState<string>(ALL);
 
-  const memberCount = familyData.members.length;
-  const generationCount = useMemo(() => {
-    const gens = new Set(familyData.members.map((m) => m.generation));
-    return gens.size;
-  }, []);
+  const roots = useMemo(() => getRootMembers(familyData.members), []);
+
+  const visibleData = useMemo(
+    () => (activeRoot === ALL ? familyData : { members: getLineage(familyData.members, activeRoot) }),
+    [activeRoot],
+  );
+
+  const memberCount = visibleData.members.length;
+  const generationCount = useMemo(() => new Set(visibleData.members.map((m) => m.generation)).size, [visibleData]);
+
+  const tabs = [{ id: ALL, label: "전체" }, ...roots.map((r) => ({ id: r.id, label: r.name }))];
+
+  const selectTab = (id: string) => {
+    setActiveRoot(id);
+    setSelectedMember(null);
+  };
 
   return (
     <div className="h-screen flex flex-col bg-slate-50">
@@ -55,10 +70,34 @@ export default function App() {
         </div>
       </header>
 
+      {/* Family line tabs */}
+      <nav className="flex-shrink-0 bg-white border-b border-slate-200 px-4 sm:px-6 z-20">
+        <div role="tablist" aria-label="1세대 가족 선택" className="flex gap-1 overflow-x-auto -mb-px">
+          {tabs.map((tab) => {
+            const active = tab.id === activeRoot;
+            return (
+              <button
+                key={tab.id}
+                role="tab"
+                aria-selected={active}
+                onClick={() => selectTab(tab.id)}
+                className={`flex-shrink-0 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
+                  active
+                    ? "border-slate-800 text-slate-900"
+                    : "border-transparent text-slate-500 hover:text-slate-800 hover:border-slate-300"
+                }`}
+              >
+                {tab.id === ALL ? tab.label : `${tab.label} 가족`}
+              </button>
+            );
+          })}
+        </div>
+      </nav>
+
       {/* Tree canvas */}
       <main className="flex-1 relative">
         <FamilyTree
-          data={familyData}
+          data={visibleData}
           onSelectMember={setSelectedMember}
           selectedId={selectedMember?.id}
           searchQuery={searchQuery}

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import * as d3 from "d3";
 import type { TreeNode, FamilyMember, FamilyData } from "@/types/family";
+import { getRootMembers } from "@/data/lineage";
 
 interface FamilyTreeProps {
   data: FamilyData;
@@ -37,19 +38,7 @@ function buildTree(members: FamilyMember[]): TreeNode[] {
     }
   });
 
-  // Roots: members with no parent who are not drawn as someone else's spouse.
-  // A spouse is drawn next to its partner, so skip it when the partner has a parent
-  // or was already taken as a root.
-  const taken = new Set<string>();
-  const roots: TreeNode[] = [];
-  members.forEach((m) => {
-    if (m.parentId) return;
-    const partner = m.spouseId ? members.find((x) => x.id === m.spouseId) : undefined;
-    if (partner && (partner.parentId || taken.has(partner.id))) return;
-    taken.add(m.id);
-    roots.push(map.get(m.id)!);
-  });
-  return roots;
+  return getRootMembers(members).map((m) => map.get(m.id)!);
 }
 
 // Custom tree layout that positions nodes by generation (y) and packs horizontally (x)

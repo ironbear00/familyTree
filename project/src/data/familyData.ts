@@ -140,7 +140,7 @@ export const familyData: FamilyData = {
 
     // (김현정 자녀)
     { id: "2-3-2-1", name: "휴즈 민석", gender: "male", generation: 4, parentId: "2-3-2", occupation: "어린이", bio: null, spouseId: null, avatarColor: AvatarColor.Male },
-    { id: "2-3-2-2", name: "휴즈 민준", gender: "male", generation: 4, parentId: "2-3-2", occupation: "응애", bio: null, spouseId: null, avatarColor: AvatarColor.Female },
+    { id: "2-3-2-2", name: "휴즈 민준", gender: "male", generation: 4, parentId: "2-3-2", occupation: "응애", bio: null, spouseId: null, avatarColor: AvatarColor.Male },
 
     // (최재원 자녀)
     { id: "3-2-1-1", name: "최우준", gender: "male", generation: 4, parentId: "3-2-1", occupation: "응애", bio: null, spouseId: null, avatarColor: AvatarColor.Male },

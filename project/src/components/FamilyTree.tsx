@@ -14,48 +14,46 @@ const NODE_HEIGHT = 80;
 const GAP_X = 50;
 const GAP_Y = 170;
 
-function buildTree(members: FamilyMember[]): TreeNode | null {
+function buildTree(members: FamilyMember[]): TreeNode[] {
   const map = new Map<string, TreeNode>();
   members.forEach((m) => {
     map.set(m.id, { ...m, children: [], spouse: null });
   });
 
-  const memberMap = new Map(members.map((m) => [m.id, m]));
-
-  // Find root: a member with no parentId and no spouseId pointing to a member with parentId
-  // We take the first generation-1 member with parentId undefined
-  const roots = members.filter((m) => !m.parentId);
-
-  if (roots.length === 0) return null;
-
-  // Build spouse links
+  // Spouse links
   members.forEach((m) => {
-    if (m.spouseId && memberMap.has(m.spouseId)) {
-      const node = map.get(m.id)!;
-      const spouseNode = map.get(m.spouseId)!;
-      node.spouse = spouseNode;
+    if (m.spouseId && map.has(m.spouseId)) {
+      map.get(m.id)!.spouse = map.get(m.spouseId)!;
     }
   });
 
-  // Build parent-child links
-  // Only attach children to the "primary" parent in a couple (the one that has parentId chain to root, or the blood-line member)
+  // Parent-child links
   members.forEach((m) => {
     if (m.parentId && map.has(m.parentId)) {
       const parent = map.get(m.parentId)!;
-      // Avoid duplicates: only add if not already a child
       if (!parent.children.find((c) => c.id === m.id)) {
         parent.children.push(map.get(m.id)!);
       }
     }
   });
 
-  // Use first root (generation 1) as the main root
-  const root = map.get(roots[0].id);
-  return root || null;
+  // Roots: members with no parent who are not drawn as someone else's spouse.
+  // A spouse is drawn next to its partner, so skip it when the partner has a parent
+  // or was already taken as a root.
+  const taken = new Set<string>();
+  const roots: TreeNode[] = [];
+  members.forEach((m) => {
+    if (m.parentId) return;
+    const partner = m.spouseId ? members.find((x) => x.id === m.spouseId) : undefined;
+    if (partner && (partner.parentId || taken.has(partner.id))) return;
+    taken.add(m.id);
+    roots.push(map.get(m.id)!);
+  });
+  return roots;
 }
 
 // Custom tree layout that positions nodes by generation (y) and packs horizontally (x)
-function layoutTree(root: TreeNode): { nodes: TreeNode[]; links: { source: TreeNode; target: TreeNode; type: "parent" | "spouse" }[]; width: number; height: number } {
+function layoutTree(roots: TreeNode[]): { nodes: TreeNode[]; links: { source: TreeNode; target: TreeNode; type: "parent" | "spouse" }[]; width: number; height: number } {
   const nodes: TreeNode[] = [];
   const links: { source: TreeNode; target: TreeNode; type: "parent" | "spouse" }[] = [];
 
@@ -83,7 +81,7 @@ function layoutTree(root: TreeNode): { nodes: TreeNode[]; links: { source: TreeN
     });
   }
 
-  traverse(root);
+  roots.forEach((r) => traverse(r));
 
   // Group nodes by generation
   const byGeneration: Record<number, TreeNode[]> = {};
@@ -153,8 +151,10 @@ function layoutTree(root: TreeNode): { nodes: TreeNode[]; links: { source: TreeN
     return sw;
   }
 
-  const totalWidth = subtreeWidth(root);
-  assignX(root, 0, 0);
+  let offsetX = 0;
+  roots.forEach((r) => {
+    offsetX += assignX(r, offsetX, 0) + GAP_X * 2;
+  });
 
   // Assign Y based on generation
   generations.forEach((gen, gi) => {
@@ -189,9 +189,9 @@ export default function FamilyTree({ data, onSelectMember, selectedId, searchQue
   const zoomBehaviorRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
 
   const { nodes, links, width, height } = (() => {
-    const root = buildTree(data.members);
-    if (!root) return { nodes: [], links: [], width: 0, height: 0 };
-    return layoutTree(root);
+    const roots = buildTree(data.members);
+    if (roots.length === 0) return { nodes: [], links: [], width: 0, height: 0 };
+    return layoutTree(roots);
   })();
 
   const fitToScreen = useCallback(() => {

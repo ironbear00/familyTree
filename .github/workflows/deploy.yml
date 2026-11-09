@@ -28,6 +28,8 @@ jobs:
           cache: npm
           cache-dependency-path: project/package-lock.json
       - run: npm ci
+      # Type errors (e.g. a stray character) and family-data mistakes stop the deploy here.
+      - run: npm run check
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

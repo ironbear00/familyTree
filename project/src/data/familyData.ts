@@ -50,8 +50,8 @@ export const familyData: FamilyData = {
     { id: "3-4-S", name: "조현주", gender: "female", generation: 2, spouseId: "3-4", occupation: "미상", bio: "", avatarColor: "#b5476b" },
 
     // ===== 3세대 (최시훈 자녀) =====
-    { id: "1-4-1", name: "언니", gender: "female", generation: 3, parentId: "1-4", occupation: "미상", bio: "", avatarColor: "#b5476b" },
-    { id: "1-4-2", name: "오빠", gender: "male", generation: 3, parentId: "1-4", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "1-4-1", name: "최수빈", gender: "female", generation: 3, parentId: "1-4", occupation: "미상", bio: "", avatarColor: "#b5476b" },
+    { id: "1-4-2", name: "최리", gender: "male", generation: 3, parentId: "1-4", occupation: "미상", bio: "", avatarColor: "#1e6091" },
 
     // ===== 3세대 (최현숙 자녀) =====
     { id: "2-1-1", name: "남종모", gender: "male", generation: 3, parentId: "2-1", spouseId: "2-1-1-S", occupation: "미상", bio: "", avatarColor: "#1e6091" },
@@ -71,7 +71,7 @@ export const familyData: FamilyData = {
 
     // ===== 3세대 (최춘석 자녀) =====
     { id: "2-4-1", name: "최진혁", gender: "male", generation: 3, parentId: "2-4", spouseId: "2-4-1-S", occupation: "미상", bio: "", avatarColor: "#1e6091" },
-    { id: "2-4-1-S", name: "최가윤", gender: "female", generation: 3, spouseId: "2-4-1", occupation: "미상", bio: "", avatarColor: "#b5476b" },
+    { id: "2-4-1-S", name: "허가윤", gender: "female", generation: 3, spouseId: "2-4-1", occupation: "미상", bio: "", avatarColor: "#b5476b" },
     { id: "2-4-2", name: "최진영", gender: "male", generation: 3, parentId: "2-4", occupation: "미상", bio: "", avatarColor: "#1e6091" },
 
     // ===== 3세대 (최문석 자녀) =====
@@ -79,14 +79,14 @@ export const familyData: FamilyData = {
     { id: "2-5-2", name: "최소정", gender: "female", generation: 3, parentId: "2-5", occupation: "미상", bio: "본인", avatarColor: "#b5476b" },
 
     // ===== 3세대 (최희순 자녀) =====
-    { id: "3-1-1", name: "이??", gender: "male", generation: 3, parentId: "3-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
-    { id: "3-1-2", name: "이??", gender: "male", generation: 3, parentId: "3-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "3-1-1", name: "이선아", gender: "male", generation: 3, parentId: "3-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "3-1-2", name: "이영준", gender: "male", generation: 3, parentId: "3-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
 
     // ===== 3세대 (최정호 자녀) =====
     { id: "3-2-1", name: "최재원", gender: "male", generation: 3, parentId: "3-2", spouseId: "3-2-1-S", occupation: "미상", bio: "", avatarColor: "#1e6091" },
-    { id: "3-2-1-S", name: "채은", gender: "female", generation: 3, spouseId: "3-2-1", occupation: "미상", bio: "", avatarColor: "#b5476b" },
+    { id: "3-2-1-S", name: "김채은", gender: "female", generation: 3, spouseId: "3-2-1", occupation: "미상", bio: "", avatarColor: "#b5476b" },
     { id: "3-2-2", name: "최재혁", gender: "male", generation: 3, parentId: "3-2", spouseId: "3-2-2-S", occupation: "미상", bio: "", avatarColor: "#1e6091" },
-    { id: "3-2-2-S", name: "예울", gender: "female", generation: 3, spouseId: "3-2-2", occupation: "미상", bio: "", avatarColor: "#b5476b" },
+    { id: "3-2-2-S", name: "김예울", gender: "female", generation: 3, spouseId: "3-2-2", occupation: "미상", bio: "", avatarColor: "#b5476b" },
 
     // ===== 3세대 (최철호 자녀) =====
     { id: "3-3-1", name: "최소윤", gender: "female", generation: 3, parentId: "3-3", occupation: "미상", bio: "", avatarColor: "#b5476b" },
@@ -94,34 +94,34 @@ export const familyData: FamilyData = {
 
     // ===== 3세대 (최성호 자녀) =====
     { id: "3-4-1", name: "최정윤", gender: "female", generation: 3, parentId: "3-4", spouseId: "3-4-1-S", occupation: "미상", bio: "", avatarColor: "#b5476b" },
-    { id: "3-4-1-S", name: "배우자", gender: "male", generation: 3, spouseId: "3-4-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
-    { id: "3-4-2", name: "최연규", gender: "male", generation: 3, parentId: "3-4", spouseId: "3-4-2-S", occupation: "미상", bio: "", avatarColor: "#1e6091" },
-    { id: "3-4-2-S", name: "배우자", gender: "female", generation: 3, spouseId: "3-4-2", occupation: "미상", bio: "", avatarColor: "#b5476b" },
+    { id: "3-4-1-S", name: "연승주", gender: "male", generation: 3, spouseId: "3-4-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "3-4-2", name: "최영규", gender: "male", generation: 3, parentId: "3-4", spouseId: "3-4-2-S", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "3-4-2-S", name: "양은하", gender: "female", generation: 3, spouseId: "3-4-2", occupation: "미상", bio: "", avatarColor: "#b5476b" },
 
     // ===== 4세대 =====
     // (남종모 자녀)
-    { id: "2-1-1-1", name: "남현준로건", gender: "male", generation: 4, parentId: "2-1-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "2-1-1-1", name: "남현준로건", gender: "male", generation: 4, parentId: "2-1-1", occupation: "응애", bio: "", avatarColor: "#1e6091" },
 
     // (남효진 자녀)
-    { id: "2-1-2-1", name: "김지아", gender: "female", generation: 4, parentId: "2-1-2", occupation: "미상", bio: "", avatarColor: "#b5476b" },
-    { id: "2-1-2-2", name: "김지성", gender: "male", generation: 4, parentId: "2-1-2", occupation: "미상", bio: "", avatarColor: "#1e6091" },
-    { id: "2-1-2-3", name: "김지호", gender: "male", generation: 4, parentId: "2-1-2", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "2-1-2-1", name: "김지아", gender: "female", generation: 4, parentId: "2-1-2", occupation: "어린이", bio: "", avatarColor: "#b5476b" },
+    { id: "2-1-2-2", name: "김지성", gender: "male", generation: 4, parentId: "2-1-2", occupation: "어린이", bio: "", avatarColor: "#1e6091" },
+    { id: "2-1-2-3", name: "김지호", gender: "male", generation: 4, parentId: "2-1-2", occupation: "어린이", bio: "", avatarColor: "#1e6091" },
 
     // (김현정 자녀)
-    { id: "2-3-2-1", name: "민석", gender: "male", generation: 4, parentId: "2-3-2", occupation: "미상", bio: "", avatarColor: "#1e6091" },
-    { id: "2-3-2-2", name: "딸", gender: "female", generation: 4, parentId: "2-3-2", occupation: "미상", bio: "", avatarColor: "#b5476b" },
+    { id: "2-3-2-1", name: "민석", gender: "male", generation: 4, parentId: "2-3-2", occupation: "어린이", bio: "", avatarColor: "#1e6091" },
+    { id: "2-3-2-2", name: "딸", gender: "female", generation: 4, parentId: "2-3-2", occupation: "응애", bio: "", avatarColor: "#b5476b" },
 
     // (최재원 자녀)
-    { id: "3-2-1-1", name: "텐텐", gender: "male", generation: 4, parentId: "3-2-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "3-2-1-1", name: "최우준", gender: "male", generation: 4, parentId: "3-2-1", occupation: "응애", bio: "", avatarColor: "#1e6091" },
 
     // (최재혁 자녀)
-    { id: "3-2-2-1", name: "자녀", gender: "male", generation: 4, parentId: "3-2-2", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "3-2-2-1", name: "최설아", gender: "male", generation: 4, parentId: "3-2-2", occupation: "응애", bio: "", avatarColor: "#1e6091" },
 
     // (최정윤 자녀)
-    { id: "3-4-1-1", name: "수호", gender: "male", generation: 4, parentId: "3-4-1", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "3-4-1-1", name: "연수호", gender: "male", generation: 4, parentId: "3-4-1", occupation: "응애", bio: "", avatarColor: "#1e6091" },
 
     // (최연규 자녀)
-    { id: "3-4-2-1", name: "최예린", gender: "female", generation: 4, parentId: "3-4-2", occupation: "미상", bio: "", avatarColor: "#b5476b" },
-    { id: "3-4-2-2", name: "자녀", gender: "male", generation: 4, parentId: "3-4-2", occupation: "미상", bio: "", avatarColor: "#1e6091" },
+    { id: "3-4-2-1", name: "최예린", gender: "female", generation: 4, parentId: "3-4-2", occupation: "응애", bio: "", avatarColor: "#b5476b" },
+    { id: "3-4-2-2", name: "최하준", gender: "male", generation: 4, parentId: "3-4-2", occupation: "응애", bio: "", avatarColor: "#1e6091" },
   ],
 };

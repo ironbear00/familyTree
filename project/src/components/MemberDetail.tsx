@@ -1,5 +1,6 @@
 import type { FamilyMember, FamilyData } from "@/types/family";
 import { X, Briefcase, Calendar, Users, Heart, User as UserIcon } from "lucide-react";
+import { generationColor } from "@/data/colors";
 
 interface MemberDetailProps {
   member: FamilyMember;
@@ -26,7 +27,7 @@ export default function MemberDetail({ member, data, onClose, onSelectMember }: 
       <div className="absolute inset-0 bg-slate-900/30 backdrop-blur-sm" onClick={onClose} />
       <div className="relative w-full max-w-md h-full bg-white shadow-2xl overflow-y-auto animate-slide-in-right">
         {/* Header */}
-        <div className="relative px-6 pt-8 pb-6" style={{ background: `linear-gradient(135deg, ${member.avatarColor || "#475569"}, ${member.avatarColor || "#475569"}cc)` }}>
+        <div className="relative px-6 pt-8 pb-6" style={{ background: `linear-gradient(135deg, ${generationColor(member.generation)}, ${generationColor(member.generation)}cc)` }}>
           <button
             onClick={onClose}
             className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 transition-colors flex items-center justify-center text-white"
@@ -97,7 +98,7 @@ export default function MemberDetail({ member, data, onClose, onSelectMember }: 
                   onClick={() => onSelectMember(parent)}
                   className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors w-full text-left"
                 >
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm" style={{ background: parent.avatarColor || "#64748b" }}>
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm" style={{ background: generationColor(parent.generation) }}>
                     {parent.name.charAt(0)}
                   </div>
                   <div>
@@ -117,7 +118,7 @@ export default function MemberDetail({ member, data, onClose, onSelectMember }: 
                   onClick={() => onSelectMember(spouse)}
                   className="flex items-center gap-3 p-3 rounded-lg bg-rose-50 hover:bg-rose-100 transition-colors w-full text-left"
                 >
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm" style={{ background: spouse.avatarColor || "#64748b" }}>
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm" style={{ background: generationColor(spouse.generation) }}>
                     {spouse.name.charAt(0)}
                   </div>
                   <div>
@@ -140,7 +141,7 @@ export default function MemberDetail({ member, data, onClose, onSelectMember }: 
                       onClick={() => onSelectMember(s)}
                       className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors text-left"
                     >
-                      <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs" style={{ background: s.avatarColor || "#64748b" }}>
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs" style={{ background: generationColor(s.generation) }}>
                         {s.name.charAt(0)}
                       </div>
                       <span className="text-sm font-medium text-slate-700">{s.name}</span>
@@ -162,7 +163,7 @@ export default function MemberDetail({ member, data, onClose, onSelectMember }: 
                       onClick={() => onSelectMember(c)}
                       className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 transition-colors text-left"
                     >
-                      <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs" style={{ background: c.avatarColor || "#64748b" }}>
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs" style={{ background: generationColor(c.generation) }}>
                         {c.name.charAt(0)}
                       </div>
                       <span className="text-sm font-medium text-slate-700">{c.name}</span>

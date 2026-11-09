@@ -2,7 +2,7 @@ import { useEffect, useRef, useCallback, useState } from "react";
 import * as d3 from "d3";
 import type { TreeNode, FamilyMember, FamilyData } from "@/types/family";
 import { getRootMembers } from "@/data/lineage";
-import { GENERATION_LEGEND, GENDER_COLORS, generationColor } from "@/data/colors";
+import { GENERATION_LEGEND, generationColor } from "@/data/colors";
 
 interface FamilyTreeProps {
   data: FamilyData;
@@ -15,7 +15,6 @@ const NODE_WIDTH = 120;
 const NODE_HEIGHT = 80;
 const GAP_X = 50;
 const GAP_Y = 170;
-const STRIPE_HEIGHT = 5;
 
 function buildTree(members: FamilyMember[]): TreeNode[] {
   const map = new Map<string, TreeNode>();
@@ -273,15 +272,6 @@ export default function FamilyTree({ data, onSelectMember, selectedId, searchQue
             {label}
           </div>
         ))}
-        <div className="font-semibold text-slate-800 mt-2 mb-1">카드 위 띠</div>
-        <div className="flex items-center gap-3">
-          <span className="flex items-center gap-1.5">
-            <span className="inline-block w-3.5 h-1.5 rounded-sm" style={{ background: GENDER_COLORS.male }} />남
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="inline-block w-3.5 h-1.5 rounded-sm" style={{ background: GENDER_COLORS.female }} />여
-          </span>
-        </div>
       </div>
 
       <svg ref={svgRef} className="w-full h-full" style={{ touchAction: "none" }}>
@@ -289,10 +279,6 @@ export default function FamilyTree({ data, onSelectMember, selectedId, searchQue
           <filter id="nodeShadow" x="-20%" y="-20%" width="140%" height="140%">
             <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.15" />
           </filter>
-          {/* Card shape, so the gender stripe follows the rounded top corners */}
-          <clipPath id="cardClip">
-            <rect width={NODE_WIDTH} height={NODE_HEIGHT} rx={12} />
-          </clipPath>
         </defs>
         <g id="tree-content">
           {/* Links */}
@@ -369,11 +355,9 @@ export default function FamilyTree({ data, onSelectMember, selectedId, searchQue
                     stroke={isMatch && searchLower ? "#f59e0b" : "#e2e8f0"}
                     strokeWidth={isMatch && searchLower ? 2 : 1}
                   />
-                  {/* Gender stripe */}
-                  <rect width={NODE_WIDTH} height={STRIPE_HEIGHT} fill={GENDER_COLORS[node.gender]} clipPath="url(#cardClip)" pointerEvents="none" />
                   {/* Avatar circle: generation color, matching the legend */}
-                  <circle cx={NODE_WIDTH / 2} cy={24} r={16} fill={generationColor(node.generation)} />
-                  <text x={NODE_WIDTH / 2} y={29} textAnchor="middle" fill="white" fontSize="14" fontWeight="600" pointerEvents="none">
+                  <circle cx={NODE_WIDTH / 2} cy={22} r={16} fill={generationColor(node.generation)} />
+                  <text x={NODE_WIDTH / 2} y={27} textAnchor="middle" fill="white" fontSize="14" fontWeight="600" pointerEvents="none">
                     {node.name.charAt(0)}
                   </text>
                   {/* Name */}

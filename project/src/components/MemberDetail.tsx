@@ -40,7 +40,8 @@ export default function MemberDetail({ member, data, onClose, onSelectMember }: 
           <h2 className="text-2xl font-bold text-white">{member.name}</h2>
           <div className="flex items-center gap-2 mt-2 text-white/90 text-sm">
             <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-sm">
-              {member.gender === "male" ? "남성" : "여성"}
+              <span aria-hidden="true">{member.gender === "male" ? "♂" : "♀"}</span>
+              <span className="sr-only">{member.gender === "male" ? "남성" : "여성"}</span>
             </span>
             <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-sm">
               {member.generation}세대

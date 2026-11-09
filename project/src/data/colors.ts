@@ -5,7 +5,4 @@ export const GENERATION_LEGEND = [
   { label: "4세대", color: "#4a4a8a" },
 ];
 
-// Lighter tones than the generation colors so the stripe is never mistaken for one.
-export const GENDER_COLORS = { male: "#60a5fa", female: "#f472b6" } as const;
-
 export const generationColor = (gen: number) => GENERATION_LEGEND[gen - 1]?.color ?? "#64748b";

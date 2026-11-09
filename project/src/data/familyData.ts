@@ -61,7 +61,7 @@ export const familyData: FamilyData = {
     // ===== 3세대 (최명남 자녀) =====
     { id: "1-3-1", name: "김지은", gender: "female", generation: 3, parentId: "1-3", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Female },
     { id: "1-3-2", name: "김세용", gender: "male", generation: 3, parentId: "1-3", occupation: null, bio: null, spouseId: "1-3-2-S", avatarColor: AvatarColor.Male },
-    { id: "1-3-2-S", name: "김세용", gender: "male", generation: 3, parentId: null, occupation: null, bio: null, spouseId: "1-3-2", avatarColor: AvatarColor.Male },
+    { id: "1-3-2-S", name: "???", gender: "female", generation: 3, parentId: null, occupation: null, bio: null, spouseId: "1-3-2", avatarColor: AvatarColor.Female },
 
     // ===== 3세대 (최시훈 자녀) =====
     { id: "1-4-1", name: "최수빈", gender: "female", generation: 3, parentId: "1-4", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Female },
@@ -121,8 +121,12 @@ export const familyData: FamilyData = {
     { id: "1-2-1-1", name: "김태영", gender: "male", generation: 4, parentId: "1-2-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
     { id: "1-2-1-2", name: "김태성", gender: "male", generation: 4, parentId: "1-2-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
 
-    // ( 자녀)
-    { id: "1-3-1-1", name: "김채은", gender: "male", generation: 4, parentId: "1-2-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
+    // (김지은 자녀)
+    { id: "1-3-1-1", name: "김채은", gender: "female", generation: 4, parentId: "1-3-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Female },
+
+    // (김세용 자녀)
+    { id: "1-3-2-1", name: "???", gender: "male", generation: 4, parentId: "1-3-2", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
+    { id: "1-3-2-2", name: "???", gender: "male", generation: 4, parentId: "1-3-2", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
 
     // (남종모 자녀)
     { id: "2-1-1-1", name: "남현준로건", gender: "male", generation: 4, parentId: "2-1-1", occupation: "응애", bio: "미국", spouseId: null, avatarColor: AvatarColor.Male },

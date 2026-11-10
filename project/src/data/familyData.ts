@@ -120,8 +120,8 @@ export const familyData: FamilyData = {
     // (김혜련 자녀)
     { id: "1-2-1-1", name: "김태영", gender: "male", generation: 4, parentId: "1-2-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
     { id: "1-2-1-2", name: "김태성", gender: "male", generation: 4, parentId: "1-2-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
-    { id: "1-2-1-3", name: "김하영", gender: "female", generation: 4, parentId: "1-2-1", occupation: null, bio: "미국 거주", spouseId: null, avatarColor: AvatarColor.Male },
-    { id: "1-2-1-4", name: "김하은", gender: "female", generation: 4, parentId: "1-2-1", occupation: null, bio: "미국 거주", spouseId: null, avatarColor: AvatarColor.Male },
+    { id: "1-2-1-3", name: "김하영", gender: "female", generation: 4, parentId: "1-2-1", occupation: null, bio: "미국 거주", spouseId: null, avatarColor: AvatarColor.Female },
+    { id: "1-2-1-4", name: "김하은", gender: "female", generation: 4, parentId: "1-2-1", occupation: null, bio: "미국 거주", spouseId: null, avatarColor: AvatarColor.Female },
 
     // (김지은 자녀)
     { id: "1-3-1-1", name: "박채은", gender: "female", generation: 4, parentId: "1-3-1", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Female },

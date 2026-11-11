@@ -75,7 +75,7 @@ export const familyData: FamilyData = {
 
     // ===== 3세대 (최명숙 자녀) =====
     { id: "2-2-1", name: "김지형", gender: "male", generation: 3, parentId: "2-2", occupation: null, bio: "라오스", spouseId: "2-2-1-S", avatarColor: AvatarColor.Male },
-    { id: "2-2-1-S", name: "띠아", gender: "female", generation: 3, parentId: null, occupation: null, bio: "라오스", spouseId: "2-2-1", avatarColor: AvatarColor.Female },
+    { id: "2-2-1-S", name: "빙", gender: "female", generation: 3, parentId: null, occupation: null, bio: "라오스", spouseId: "2-2-1", avatarColor: AvatarColor.Female },
     { id: "2-2-2", name: "김민경", gender: "female", generation: 3, parentId: "2-2", occupation: null, bio: "일본", spouseId: null, avatarColor: AvatarColor.Female },
 
     // ===== 3세대 (최명랑 자녀) =====
@@ -131,7 +131,7 @@ export const familyData: FamilyData = {
     { id: "1-3-2-2", name: "김도우", gender: "male", generation: 4, parentId: "1-3-2", occupation: null, bio: null, spouseId: null, avatarColor: AvatarColor.Male },
 
     // (남종모 자녀)
-    { id: "2-1-1-1", name: "남현준로건", gender: "male", generation: 4, parentId: "2-1-1", occupation: "응애", bio: "미국", spouseId: null, avatarColor: AvatarColor.Male },
+    { id: "2-1-1-1", name: "남 현준 로건", gender: "male", generation: 4, parentId: "2-1-1", occupation: "응애", bio: "미국", spouseId: null, avatarColor: AvatarColor.Male },
 
     // (남효진 자녀)
     { id: "2-1-2-1", name: "김지아", gender: "female", generation: 4, parentId: "2-1-2", occupation: "어린이", bio: null, spouseId: null, avatarColor: AvatarColor.Female },
